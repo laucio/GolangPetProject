@@ -1,0 +1,5 @@
+[GIN-debug] GET    /public/publictest        --> github.com/laucio/WebApi.ShowPrueba (3 handlers)
+[GIN-debug] GET    /admin/privatetest        --> github.com/laucio/WebApi.ShowPrueba (4 handlers)
+[GIN-debug] GET    /admin/getallprojects     --> github.com/laucio/WebApi.GetAllProjects (4 handlers)
+[GIN-debug] Environment variable PORT is undefined. Using port :8080 by default
+[GIN-debug] Listening and serving HTTP on :8080
