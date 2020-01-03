@@ -2,6 +2,6 @@ FROM golang:latest
 RUN mkdir /app
 ADD . /app/
 WORKDIR /app
-EXPOSE 5000
+EXPOSE 8080
 RUN go build -o main .
 CMD ["/app/main"]

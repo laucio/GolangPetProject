@@ -33,24 +33,6 @@ func main() {
 	r.Run()
 }
 
-func Logger() gin.HandlerFunc {
-	return func(c *gin.Context) {
-		t := time.Now()
-
-		// Set example variable
-		c.Set("example", "12345")
-
-		// before request
-
-		c.Next()
-
-		// after request
-		latency := time.Since(t)
-		log.Print(latency)
-
-		// access the status we are sending
-		status := c.Writer.Status()
-		log.Println(status)
-		log.Println(c.Request.RequestURI)
-	}
-}
+// docker build -t petprojectfinalversion .
+// Docker docker run -d -p 5000:8080 petprojectfinalversion
+// Corre en localhost:5000
