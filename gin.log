@@ -1,5 +1,17 @@
-[GIN-debug] GET    /public/publictest        --> github.com/laucio/WebApi.ShowPrueba (3 handlers)
-[GIN-debug] GET    /admin/privatetest        --> github.com/laucio/WebApi.ShowPrueba (4 handlers)
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /public/publictest        --> github.com/laucio/WebApi.GetAllProjects (3 handlers)
+[GIN-debug] GET    /admin/privatetest        --> github.com/laucio/WebApi.GetAllProjects (4 handlers)
 [GIN-debug] GET    /admin/getallprojects     --> github.com/laucio/WebApi.GetAllProjects (4 handlers)
+[GIN-debug] GET    /admin/getWrongNameProjects/:pattern --> github.com/laucio/WebApi.GetWrongNameProjects (4 handlers)
+[GIN-debug] GET    /admin/getTimeWindowProjects/:startdate/:enddate --> github.com/laucio/WebApi.GetTimeWindowProjects (4 handlers)
+[GIN-debug] GET    /admin/getReadmeProjects  --> github.com/laucio/WebApi.GetReadmeProjects (4 handlers)
 [GIN-debug] Environment variable PORT is undefined. Using port :8080 by default
 [GIN-debug] Listening and serving HTTP on :8080
+[GIN] 2020/01/03 - 12:26:45 | 200 |    3.4885575s |             ::1 | GET      /admin/getallprojects
+[GIN] 2020/01/03 - 12:27:16 | 200 |    4.0404522s |             ::1 | GET      /admin/getallprojects
+[GIN] 2020/01/03 - 12:27:31 | 200 |     409.109ms |             ::1 | GET      /admin/getReadmeProjects
