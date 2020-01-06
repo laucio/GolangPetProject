@@ -12,6 +12,5 @@
 [GIN-debug] GET    /admin/getReadmeProjects  --> github.com/laucio/WebApi.GetReadmeProjects (4 handlers)
 [GIN-debug] Environment variable PORT is undefined. Using port :8080 by default
 [GIN-debug] Listening and serving HTTP on :8080
-[GIN] 2020/01/03 - 12:26:45 | 200 |    3.4885575s |             ::1 | GET      /admin/getallprojects
-[GIN] 2020/01/03 - 12:27:16 | 200 |    4.0404522s |             ::1 | GET      /admin/getallprojects
-[GIN] 2020/01/03 - 12:27:31 | 200 |     409.109ms |             ::1 | GET      /admin/getReadmeProjects
+[GIN] 2020/01/03 - 14:45:21 | 500 |   14.7612108s |             ::1 | GET      /admin/getallprojects
+[GIN] 2020/01/03 - 14:46:44 | 500 |   56.9418165s |             ::1 | GET      /admin/getallprojects

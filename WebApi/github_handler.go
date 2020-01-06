@@ -5,6 +5,7 @@ import (
 	"github.com/gin-gonic/gin"
 	"github.com/laucio/Entity"
 	"github.com/laucio/Repository"
+	"log"
 	"regexp"
 	"time"
 )
@@ -16,8 +17,8 @@ const (
 
 func GetAllProjects(c *gin.Context) {
 	projects, error := Repository.GetAllProjects()
-
 	if error != nil {
+
 		c.JSON(500, gin.H{
 			"error": fmt.Errorf("%s", error),
 		})
@@ -32,6 +33,7 @@ func GetWrongNameProjects(c *gin.Context) {
 	pattern := c.Param("pattern")
 	projects, error := Repository.GetAllProjects()
 	if error != nil {
+		log.Println(error)
 		c.JSON(500, gin.H{
 			"error": fmt.Errorf("%s", error),
 		})
@@ -59,6 +61,7 @@ func GetTimeWindowProjects(c *gin.Context) {
 
 	projects, error := Repository.GetAllProjects()
 	if error != nil {
+		log.Println(error)
 		c.JSON(500, gin.H{
 			"error": fmt.Errorf("%s", error),
 		})

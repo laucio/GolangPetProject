@@ -4,9 +4,7 @@ import (
 	"github.com/gin-gonic/gin"
 	"github.com/laucio/WebApi"
 	"io"
-	"log"
 	"os"
-	"time"
 )
 
 func main() {
@@ -14,7 +12,6 @@ func main() {
 	// Logging to a file.
 	f, _ := os.Create("gin.log")
 	gin.DefaultWriter = io.MultiWriter(f, os.Stdout)
-
 	r := gin.Default()
 
 	//Public group
