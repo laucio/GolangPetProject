@@ -18,7 +18,7 @@ const (
 func GetAllProjects(c *gin.Context) {
 	projects, error := Repository.GetAllProjects()
 	if error != nil {
-
+		log.Println(error)
 		c.JSON(500, gin.H{
 			"error": fmt.Errorf("%s", error),
 		})
@@ -47,7 +47,6 @@ func GetWrongNameProjects(c *gin.Context) {
 		if !match {
 			wrongNameProjects = append(wrongNameProjects, project)
 		}
-
 	}
 
 	c.JSON(200, gin.H{
@@ -75,7 +74,6 @@ func GetTimeWindowProjects(c *gin.Context) {
 		if isInTimeWindow(projectStartDate, startDate, endDate) {
 			timeWindowProjects = append(timeWindowProjects, project)
 		}
-
 	}
 
 	c.JSON(200, gin.H{

@@ -12,6 +12,13 @@ func main() {
 	// Logging to a file.
 	f, _ := os.Create("gin.log")
 	gin.DefaultWriter = io.MultiWriter(f, os.Stdout)
+
+	r := SetupRouter()
+	r.Run()
+}
+
+func SetupRouter() *gin.Engine {
+
 	r := gin.Default()
 
 	//Public group
@@ -27,7 +34,8 @@ func main() {
 	authorized.GET("/getWrongNameProjects/:pattern", WebApi.GetWrongNameProjects)
 	authorized.GET("/getTimeWindowProjects/:startdate/:enddate", WebApi.GetTimeWindowProjects)
 	authorized.GET("/getReadmeProjects", WebApi.GetReadmeProjects)
-	r.Run()
+
+	return r
 }
 
 // docker build -t petprojectfinalversion .
